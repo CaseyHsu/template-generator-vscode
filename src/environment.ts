@@ -30,8 +30,8 @@ export class Fields {
     }
 
     @once('_upperCaseName')
-    public get upperCamelCaseName() {
-        return _.toUpper(this.name);
+    public get upperCaseName() {
+        return _.toUpper(this._name);
     }
 
     @once('_camelCaseName')
