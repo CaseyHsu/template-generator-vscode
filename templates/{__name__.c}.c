@@ -3,8 +3,8 @@
 ******************************* C SOURCE FILE *********************************
 **                           *******************                             **
 **                                                                           **
-** project   : {__project__}                                                 **
-** filename  : {__name__}.h                                                  **
+** project   : {__project__}                                     **
+** filename  : {__name__}.h                                      **
 ** version   : 0.0.0.1                                                       **
 ** date      : {__date__}                                                    **
 **                                                                           **
@@ -20,15 +20,15 @@
 **                                                                           **
 ** Version     : 0.0.0.1                                                     **
 ** Date        : {__date__}                                                  **
-** Created by  : {__author__} ({__email__})                                  **
-** Revised by  : {__author__}                                                **
+** Created by  : {__author__} ({__email__})                      **
+** Revised by  : {__author__}                                    **
 ** Description : Original version.                                           **
 **                                                                           **
 *******************************************************************************
 
 */
 
-#define {__upperCamelCaseName__}_SRC
+#define {__upperCaseName__}_SRC
 
 /******************************************************************************/
 /**                                                                          **/

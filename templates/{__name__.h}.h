@@ -3,8 +3,8 @@
 ******************************* C HEADER FILE *********************************
 **                           *******************                             **
 **                                                                           **
-** project   : {__project__}                                                 **
-** filename  : {__name__}.h                                                  **
+** project   : {__project__}                                     **
+** filename  : {__name__}.h                                      **
 ** version   : 0.0.0.1                                                       **
 ** date      : {__date__}                                                    **
 **                                                                           **
@@ -17,8 +17,8 @@
 
 */
 
-#ifndef {__upperCamelCaseName__}_INCLUDED
-#define {__upperCamelCaseName__}_INCLUDED
+#ifndef {__upperCaseName__}_INCLUDED
+#define {__upperCaseName__}_INCLUDED
 
 /******************************************************************************/
 /**                                                                          **/
@@ -46,10 +46,10 @@
 /**                     EXPORTED VARIABLES                                   **/
 /**                                                                          **/
 /******************************************************************************/
-#ifdef {__upperCamelCaseName__}_SRC
-#define {__upperCamelCaseName__}_EXTERN /* nothing */
+#ifdef {__upperCaseName__}_SRC
+#define {__upperCaseName__}_EXTERN /* nothing */
 #else
-#define {__upperCamelCaseName__}_EXTERN extern
+#define {__upperCaseName__}_EXTERN extern
 #endif
 
 /******************************************************************************/
