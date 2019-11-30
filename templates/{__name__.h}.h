@@ -1,24 +1,24 @@
 /*
                              *******************
 ******************************* C HEADER FILE *********************************
-**                           *******************                             **
-**                                                                           **
-** project   : {__project__}                                     **
-** filename  : {__name__}.h                                      **
-** version   : 0.0.0.1                                                       **
-** date      : {__date__}                                                    **
-**                                                                           **
+**                           *******************
+**
+** project   : {__project__}
+** filename  : {__name__}.h
+** version   : 0.0.0.1
+** date      : {__date__}
+**
 *******************************************************************************
-**                                                                           **
-** Copyright (c) 2016-{__year__}, ShihLin Electric & Engineering Corporation       **
-** All rights reserved.                                                      **
-**                                                                           **
+**
+** Copyright (c) 2016-{__year__}, {__company__}
+** All rights reserved.
+**
 *******************************************************************************
 
 */
 
-#ifndef {__upperCaseName__}_INCLUDED
-#define {__upperCaseName__}_INCLUDED
+#ifndef __{__UpperSnakeCaseName__}_INCLUDED
+#define __{__UpperSnakeCaseName__}_INCLUDED
 
 /******************************************************************************/
 /**                                                                          **/
@@ -44,10 +44,10 @@
 /**                     EXPORTED VARIABLES                                   **/
 /**                                                                          **/
 /******************************************************************************/
-#ifdef {__upperCaseName__}_SRC
-#define {__upperCaseName__}_EXTERN /* nothing */
+#ifdef __{__UpperSnakeCaseName__}_SRC
+#define EXTERN_{__UpperSnakeCaseName__} /* nothing */
 #else
-#define {__upperCaseName__}_EXTERN extern
+#define EXTERN_{__UpperSnakeCaseName__} extern
 #endif
 
 /******************************************************************************/
@@ -57,7 +57,7 @@
 /******************************************************************************/
 
 /******************************************************************************/
-float ExportedFuncTemplate1(int16 input1, int16 input2);
+float32 ExportedFuncTemplate1(int16 input1, int16 input2);
 /******************************************************************************/
 /*
  * @brief  This is a commnet block for explaining function parameters and

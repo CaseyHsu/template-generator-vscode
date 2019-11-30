@@ -2,7 +2,7 @@
     "name": "template-generator-vscode",
     "displayName": "Template Generator",
     "description": "Files/Folders template for vscode",
-    "version": "0.4.3",
+    "version": "0.4.4",
     "publisher": "CaseyHsu",
     "icon": "images/icon.jpg",
     "license": "SEE LICENSE IN LICENSE.md",
@@ -87,6 +87,10 @@
                 "templateGenerator.fields.project": {
                     "type": "string",
                     "description": "Custom fields of Template Generator: project"
+                },
+                "templateGenerator.fields.company": {
+                    "type": "string",
+                    "description": "Custom fields of Template Generator: company"
                 }
             }
         }

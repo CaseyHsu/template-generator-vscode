@@ -1,34 +1,34 @@
 /*
                              *******************
 ******************************* C SOURCE FILE *********************************
-**                           *******************                             **
-**                                                                           **
-** project   : {__project__}                                     **
-** filename  : {__name__}.h                                      **
-** version   : 0.0.0.1                                                       **
-** date      : {__date__}                                                    **
-**                                                                           **
+                             *******************
+**
+** project   : {__project__}
+** filename  : {__name__}.h
+** version   : 0.0.0.1
+** date      : {__date__}
+**
 *******************************************************************************
-**                                                                           **
-** Copyright (c) 2016-{__year__}, ShihLin Electric & Engineering Corporation       **
-** All rights reserved.                                                      **
-**                                                                           **
+**
+** Copyright (c) 2016-{__year__}, {__company__}
+** All rights reserved.
+**
 *******************************************************************************
-**                                                                           **
-** VERSION HISTORY:                                                          **
-** ----------------                                                          **
-**                                                                           **
-** Version     : 0.0.0.1                                                     **
-** Date        : {__date__}                                                  **
-** Created by  : {__author__} ({__email__})                      **
-** Revised by  : {__author__}                                    **
-** Description : Original version.                                           **
-**                                                                           **
+**
+** VERSION HISTORY:
+** ----------------
+**
+** Version     : 0.0.0.1
+** Date        : {__date__}
+** Created by  : {__author__} ({__email__})
+** Revised by  : {__author__}
+** Description : Original version.
+**
 *******************************************************************************
 
 */
 
-#define {__upperCaseName__}_SRC
+#define __{__UpperSnakeCaseName__}_SRC
 
 /******************************************************************************/
 /**                                                                          **/
@@ -68,7 +68,7 @@
 /******************************************************************************/
 
 /******************************************************************************/
-float ExportedFuncTemplate1(int16 input1, int16 input2)
+float32 ExportedFuncTemplate1(int16 input1, int16 input2)
 /******************************************************************************/
 {
 

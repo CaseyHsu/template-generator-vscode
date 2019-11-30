@@ -13,25 +13,19 @@ import { once } from './decorators';
 export class Fields {
     private _name: string;
     private _camelCaseName: string;
-    private _pascalCaseName: string;
+    private _PascalCaseName: string;
     private _snakeCaseName: string;
     private _kebabCaseName: string;
     private _lowerDotCaseName: string;
-    private _upperCaseName: string;
-    private _screamingSnakeCaseName: string;
+    private _UpperSnakeCaseName: string;
 
     public get name() {
         return this._name;
     }
 
-    @once('_screamingSnakeCaseName')
-    public get screamingSnakeCaseName() {
+    @once('_UpperSnakeCaseName')
+    public get UpperSnakeCaseName() {
         return _.toUpper(_.snakeCase(this._name));
-    }
-
-    @once('_upperCaseName')
-    public get upperCaseName() {
-        return _.toUpper(this._name);
     }
 
     @once('_camelCaseName')
@@ -39,8 +33,8 @@ export class Fields {
         return _.camelCase(this._name);
     }
 
-    @once('_pascalCaseName')
-    public get pascalCaseName() {
+    @once('_PascalCaseName')
+    public get PascalCaseName() {
         return _.chain(this._name)
             .camelCase()
             .upperFirst()
@@ -65,12 +59,11 @@ export class Fields {
     public set name(name: string) {
         this._name = name;
         this._camelCaseName = null;
-        this._pascalCaseName = null;
+        this._PascalCaseName = null;
         this._snakeCaseName = null;
         this._kebabCaseName = null;
         this._lowerDotCaseName = null;
-        this._upperCaseName = null;
-        this._screamingSnakeCaseName = null;
+        this._UpperSnakeCaseName = null;
     }
 
     public get year() {
@@ -95,6 +88,10 @@ export class Fields {
 
     public get project(): string {
         return this.config.get('fields.project');
+    }
+
+    public get company(): string {
+        return this.config.get('fields.company');
     }
 
     private get config() {

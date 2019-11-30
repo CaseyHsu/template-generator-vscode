@@ -29,14 +29,14 @@ a Files/Folders template for vscode,fork from https://github.com/DengSir/templat
 * `{__email__}` : email
 * `{__link__}` : link
 * `{__project__}` : project name
+* `{__company__}` : copyright name
 * `{__date__}` : create local date
 * `{__camelCaseName__}` : camelCaseFileName
-* `{__pascalCaseName__}` : PascalCaseFileName
+* `{__PascalCaseName__}` : PascalCaseFileName
 * `{__snakeCaseName__}` : snake_case_file_name
 * `{__kebabCaseName__}` : kebab-case-file-name
 * `{__lowerDotCaseName__}` : lower.dot.case.file.name
-* `{__upperCaseName__}` : UPPERCASENAME
-* `{__screamingSnakeCaseName__}` : SCREAMING_SNAKE_CASE_FILE_NAME
+* `{__UpperSnakeCaseName__}` : UPPER_SNAKE_CASE_FILE_NAME
 * `{__delete__}` : empty string
 
 You can define the name displayed on the template selector, like:

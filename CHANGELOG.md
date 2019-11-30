@@ -3,9 +3,13 @@ All notable changes to the "template-generator-vscode" extension will be documen
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.4]
+### Added
+ - project name and company name
+
 ## [0.4.3]
 ### Added
- - upper camel case
+ - upper snake case name
 
 ## [Unreleased]
 - Initial release
