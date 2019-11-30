@@ -17,9 +17,21 @@ export class Fields {
     private _snakeCaseName: string;
     private _kebabCaseName: string;
     private _lowerDotCaseName: string;
+    private _upperCaseName: string;
+    private _screamingSnakeCaseName: string;
 
     public get name() {
         return this._name;
+    }
+
+    @once('_screamingSnakeCaseName')
+    public get screamingSnakeCaseName() {
+        return _.toUpper(_.snakeCase(this._name));
+    }
+
+    @once('_upperCaseName')
+    public get upperCamelCaseName() {
+        return _.toUpper(this.name);
     }
 
     @once('_camelCaseName')
@@ -57,10 +69,16 @@ export class Fields {
         this._snakeCaseName = null;
         this._kebabCaseName = null;
         this._lowerDotCaseName = null;
+        this._upperCaseName = null;
+        this._screamingSnakeCaseName = null;
+    }
+
+    public get year() {
+        return new Date().getFullYear();
     }
 
     public get date() {
-        return new Date().toLocaleString();
+        return new Date().toLocaleDateString();
     }
 
     public get author(): string {
@@ -73,6 +91,10 @@ export class Fields {
 
     public get link(): string {
         return this.config.get('fields.link');
+    }
+
+    public get project(): string {
+        return this.config.get('fields.project');
     }
 
     private get config() {

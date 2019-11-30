@@ -2,14 +2,14 @@
     "name": "template-generator-vscode",
     "displayName": "Template Generator",
     "description": "Files/Folders template for vscode",
-    "version": "0.4.1",
-    "publisher": "DengSir",
+    "version": "0.4.3",
+    "publisher": "CaseyHsu",
     "icon": "images/icon.jpg",
     "license": "SEE LICENSE IN LICENSE.md",
     "main": "./out/src/extension",
     "repository": {
         "type": "git",
-        "url": "https://github.com/DengSir/template-generator-vscode.git"
+        "url": "https://github.com/CaseyHsu/template-generator-vscode.git"
     },
     "engines": {
         "vscode": "^1.12.0"
@@ -83,6 +83,10 @@
                 "templateGenerator.fields.link": {
                     "type": "string",
                     "description": "Custom fields of Template Generator: link"
+                },
+                "templateGenerator.fields.project": {
+                    "type": "string",
+                    "description": "Custom fields of Template Generator: project"
                 }
             }
         }

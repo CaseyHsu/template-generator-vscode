@@ -2,6 +2,8 @@
 
 This extension helps in creating files and folders easily from defined templates.
 
+a Files/Folders template for vscode,fork from https://github.com/DengSir/template-generator-vscode.git
+
 ## Features
 
 * File template support
@@ -26,12 +28,15 @@ This extension helps in creating files and folders easily from defined templates
 * `{__author__}` : author
 * `{__email__}` : email
 * `{__link__}` : link
-* `{__date__}` : create time
+* `{__project__}` : project name
+* `{__date__}` : create local date
 * `{__camelCaseName__}` : camelCaseFileName
 * `{__pascalCaseName__}` : PascalCaseFileName
 * `{__snakeCaseName__}` : snake_case_file_name
 * `{__kebabCaseName__}` : kebab-case-file-name
 * `{__lowerDotCaseName__}` : lower.dot.case.file.name
+* `{__upperCaseName__}` : UPPERCASENAME
+* `{__screamingSnakeCaseName__}` : SCREAMING_SNAKE_CASE_FILE_NAME
 * `{__delete__}` : empty string
 
 You can define the name displayed on the template selector, like:
@@ -51,9 +56,10 @@ File content :
 # -*- coding: utf-8 -*-
 #
 # {__name__}.py
-# @Author : {__author__} ({__email__})
-# @Link   : {__link__}
-# @Date   : {__date__}
+# @Project : {__project__}
+# @Author  : {__author__} ({__email__})
+# @Link    : {__link__}
+# @Date    : {__date__}
 
 ```
 
@@ -83,6 +89,7 @@ This extension contributes the following settings:
 * `templateGenerator.fields.author` : Custom fields of Template Generator: author
 * `templateGenerator.fields.email` : Custom fields of Template Generator: email
 * `templateGenerator.fields.link` : Custom fields of Template Generator: link
+* `templateGenerator.fields.project` : Custom fields of Template Generator: project
 
 ## Known Issues
 
