@@ -4,7 +4,7 @@
                              *******************
 **
 ** project   : {__project__}
-** filename  : {__name__}.h
+** filename  : {__name__}.c
 ** version   : 0.0.0.1
 ** date      : {__date__}
 **
