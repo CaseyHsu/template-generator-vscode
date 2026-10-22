@@ -3,7 +3,7 @@
 -- Engineer:       {__author__} ({__email__})
 --
 -- Create Date:    {__date__}
--- Module Name:    {__name__} - {__name__}_arch
+-- Module Name:    {__PascalCaseName__} - {__PascalCaseName__}_arch
 -- Project Name:   {__project__}
 -- Target Devices:
 -- Tool versions:
@@ -38,11 +38,12 @@
 --   component instantiations:              "<ENTITY_>I_<#|FUNC>"
 ----------------------------------------------------------------------------------
 library IEEE;
-library UNISIM;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use UNISIM.VComponents.all;
+
+-- Xilinx primitives: uncomment only when instantiating UNISIM components.
+-- library UNISIM;
+-- use UNISIM.VComponents.all;
 
 entity {__PascalCaseName__} is
   Port
@@ -78,7 +79,9 @@ begin
 ----------------------------------------------------------------------------------
 --  Functional description begin
 ----------------------------------------------------------------------------------
-UPPER_SNAKE_CASE: process(inClk, inReset)
+-- Asynchronous active-high reset. For Xilinx 7-series and later, a synchronous
+-- reset is recommended: move the reset check inside rising_edge(inClk).
+{__UpperSnakeCaseName__}_PROCESS: process(inClk, inReset)
 begin
   if inReset = '1' then
     regName <= '0';

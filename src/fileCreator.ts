@@ -33,14 +33,18 @@ export class FileCreator {
             return;
         }
 
-        if (fs.existsSync(template.targetPath)) {
-            throw Error('Target file/folder exists, can`t create.');
+        let targetPaths = template.isFlat()
+            ? template.templateFiles.map(f => f.targetPath)
+            : [template.targetPath];
+        let existing = targetPaths.filter(p => fs.existsSync(p));
+        if (existing.length > 0) {
+            throw Error(`Target exists, can't create: ${existing.map(p => path.basename(p)).join(', ')}`);
         }
 
         try {
             this.createTemplate(template);
         } catch (error) {
-            throw Error('Create file/folder failed.');
+            throw Error(`Create file/folder failed: ${error.message}`);
         }
     }
 

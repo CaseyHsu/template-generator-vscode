@@ -31,7 +31,7 @@ export class Template implements vscode.QuickPickItem {
     }
 
     public get description(): string {
-        return this.isFile() ? 'File' : 'Folder';
+        return this.isFile() ? 'File' : this.isFlat() ? 'Files' : 'Folder';
     }
 
     @once()
@@ -63,5 +63,11 @@ export class Template implements vscode.QuickPickItem {
 
     public isFile(): boolean {
         return this._isFile;
+    }
+
+    // A folder template named only `{__delete__}` (e.g. `{__delete__.C module}`)
+    // expands its children directly into the target folder.
+    public isFlat(): boolean {
+        return !this.isFile() && /^\{__delete__(\.[^{}]*)?\}$/.test(this.templatePath);
     }
 }

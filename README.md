@@ -31,6 +31,7 @@ a Files/Folders template for vscode,fork from https://github.com/DengSir/templat
 * `{__project__}` : project name
 * `{__company__}` : copyright name
 * `{__date__}` : create local date
+* `{__year__}` : create year
 * `{__camelCaseName__}` : camelCaseFileName
 * `{__PascalCaseName__}` : PascalCaseFileName
 * `{__snakeCaseName__}` : snake_case_file_name
@@ -42,6 +43,19 @@ a Files/Folders template for vscode,fork from https://github.com/DengSir/templat
 You can define the name displayed on the template selector, like:
 
 * `{__name__.python}.py`
+
+### Multi-file templates without a wrapping folder
+
+A folder template named only `{__delete__.<label>}` expands its files directly into the target folder,
+e.g. a C source/header pair:
+
+```
+{__delete__.C module (.c + .h)}/
+├── {__name__}.c
+└── {__name__}.h
+```
+
+Creation is refused if any of the target files already exists.
 
 ### Example
 
@@ -67,12 +81,15 @@ File content :
 
 ### Default templates
 
+* `c.c` / `h.h`
+* `C module (.c + .h)`
 * `html.html`
 * `javascript.js`
 * `lua.lua`
 * `python.py`
-* `typescript.ts`
 * `python Folder`
+* `typescript.ts`
+* `vhd.vhd` (file name follows the PascalCase entity name)
 
 ## Extension Settings
 
@@ -90,6 +107,7 @@ This extension contributes the following settings:
 * `templateGenerator.fields.email` : Custom fields of Template Generator: email
 * `templateGenerator.fields.link` : Custom fields of Template Generator: link
 * `templateGenerator.fields.project` : Custom fields of Template Generator: project
+* `templateGenerator.fields.company` : Custom fields of Template Generator: company
 
 ## Known Issues
 
