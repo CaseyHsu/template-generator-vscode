@@ -72,6 +72,10 @@ headers, so the same module compiles on the target and on a host PC for unit tes
 `project_types.h` uses the same `DSP28_DATA_TYPES` guard as the TI C2000 device headers, so
 both can be included in either order.
 
+The `C++ class (.hpp + .cpp)` template follows the same interface (`Params`, `init()`, `reset()`,
+`run()`) as a class, and stays within C++03 with no exceptions, RTTI or heap allocation so it also
+fits embedded targets.
+
 ### Example
 
 File name :
@@ -98,6 +102,7 @@ File content :
 
 * `c.c` / `h.h`
 * `C module (.c + .h)`
+* `C++ class (.hpp + .cpp)`
 * `project_types (C types).h` (always creates `project_types.h`; the name input is ignored)
 * `html.html`
 * `javascript.js`

@@ -7,6 +7,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
  - Flat folder templates: a folder named `{__delete__.<label>}` expands its files into the target folder
  - `C module (.c + .h)` template
+ - `C++ class (.hpp + .cpp)` template with the same init/reset/run interface as the C modules
  - `project_types (C types).h` template: portable `int16`/`Uint16`/`float32`/... types on `<stdint.h>`
 ### Changed
  - C templates use a handle style (`<Name>_Params`, `<Name>_Obj`, `<Name>_init/reset/run`) instead of `EXTERN_<NAME>` globals
