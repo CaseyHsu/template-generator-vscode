@@ -76,6 +76,18 @@ The `C++ class (.hpp + .cpp)` template follows the same interface (`Params`, `in
 `run()`) as a class, and stays within C++03 with no exceptions, RTTI or heap allocation so it also
 fits embedded targets.
 
+### MATLAB templates
+
+* `MATLAB function.m` : function with H1 help line and an `arguments` block (R2019b+).
+* `MATLAB script (parameters).m` : timing / motor / inverter / controller parameter structs for
+  Simulink or PLECS models; values are `NaN` until filled in, and the script warns about any left.
+* `MATLAB C-MEX S-function` : Level-2 C MEX S-function that runs a C module (`<module>.c/.h`, enter
+  the module name) as a Simulink block. Build with `mex sfun_<module>.c <module>.c`.
+* `MATLAB MEX function` : `y = mex_<module>(gain, u)` runs the C module over an input sequence from
+  MATLAB, e.g. to compare it with a model offline. Build with `mex -R2018a mex_<module>.c <module>.c`.
+
+The module name must be a valid MATLAB identifier (letters, digits, `_`, starting with a letter).
+
 ### Example
 
 File name :
@@ -103,6 +115,8 @@ File content :
 * `c.c` / `h.h`
 * `C module (.c + .h)`
 * `C++ class (.hpp + .cpp)`
+* `MATLAB function.m` / `MATLAB script (parameters).m`
+* `MATLAB C-MEX S-function` (creates `sfun_<module>.c`) / `MATLAB MEX function` (creates `mex_<module>.c`)
 * `project_types (C types).h` (always creates `project_types.h`; the name input is ignored)
 * `html.html`
 * `javascript.js`
