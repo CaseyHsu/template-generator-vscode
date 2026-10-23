@@ -57,6 +57,21 @@ e.g. a C source/header pair:
 
 Creation is refused if any of the target files already exists.
 
+### C module templates
+
+The C templates use a handle (object) style instead of exported globals:
+
+```c
+static SpeedCtrl_Obj axis1;            /* one instance per axis, no malloc */
+SpeedCtrl_init(&axis1, &params);
+out = SpeedCtrl_run(&axis1, input);    /* e.g. from the control ISR */
+```
+
+Module headers include only `project_types.h` (fixed-width types on `<stdint.h>`), not device
+headers, so the same module compiles on the target and on a host PC for unit tests.
+`project_types.h` uses the same `DSP28_DATA_TYPES` guard as the TI C2000 device headers, so
+both can be included in either order.
+
 ### Example
 
 File name :
@@ -83,6 +98,7 @@ File content :
 
 * `c.c` / `h.h`
 * `C module (.c + .h)`
+* `project_types (C types).h` (always creates `project_types.h`; the name input is ignored)
 * `html.html`
 * `javascript.js`
 * `lua.lua`

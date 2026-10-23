@@ -7,6 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
  - Flat folder templates: a folder named `{__delete__.<label>}` expands its files into the target folder
  - `C module (.c + .h)` template
+ - `project_types (C types).h` template: portable `int16`/`Uint16`/`float32`/... types on `<stdint.h>`
+### Changed
+ - C templates use a handle style (`<Name>_Params`, `<Name>_Obj`, `<Name>_init/reset/run`) instead of `EXTERN_<NAME>` globals
+ - C headers include `project_types.h` instead of `F28x_Project.h`
 ### Fixed
  - C: include guard / `_SRC` macros no longer use reserved `__` identifiers; `extern "C"` guard for C++; template function returns a value
  - VHDL: drop non-standard `STD_LOGIC_UNSIGNED`, make `UNISIM` optional, substitute the process label, file name matches entity name
